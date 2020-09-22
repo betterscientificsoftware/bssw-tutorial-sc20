@@ -34,6 +34,7 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-titles-from-headings
+  - jekyll-seo-tag
 
 titles_from_headings:
   enabled:     true
