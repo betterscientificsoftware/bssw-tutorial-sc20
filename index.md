@@ -12,6 +12,11 @@ This site will provide late-breaking updates and additional information and reso
 
 *Last update: {{ "now" | date: "%F" }}*
 
+## How to Participate
+
+The main presentations have been pre-recorded.  Please use the chat tool to ask questions during the presentations. The speaker and the rest of the tutorial team will be monitoring and will respond.  During the breaks, we will be available for live Q&A (also via chat) and will provide some live demos of concepts in the hands-on exercises
+Participation in the exercises is optional – we know you need breaks too.
+
 ## Final Version of Slides
 
 The final slides will be available at <https://doi.org/10.6084/m9.figshare.12994376> when they are ready.
@@ -64,6 +69,15 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
 *These are the links included in the tutorial presentations, for easier access*
 
 * Module 0:
+  * [Citation for this tutorial](https://dx.doi.org/10.6084/m9.figshare.12994376)
+  * [IDEAS Productivity Project](http://ideas-productivity.org)
+    * [IDEAS Productivity mailing list](http://eepurl.com/cQCyJ5)
+  * [Better Scientific Software site](https://bssw.io)
+    * [BSSw Digest](https://bssw.io/pages/receive-our-email-digest)
+    * [RSS Feed](https://bssw.io/items.rss)
+  * [The IDEAS Report](https://exascaleproject.org/better-scientific-productivity-through-better-scientific-software-the-ideas-report)
+  * [Tutorial Evaluation Link](https://submissions.supercomputing.org/?page=Submit&id=TutorialEvaluation&site=sc20)
+  * [Write to the tutorial authors](mailto:bssw-tutorial@lists.mcs.anl.gov)
 * Module 1:
 * Module 2:
 * Module 3:
