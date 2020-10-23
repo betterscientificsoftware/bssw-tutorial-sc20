@@ -12,16 +12,54 @@ This site will provide late-breaking updates and additional information and reso
 
 *Last update: {{ "now" | date: "%F" }}*
 
+---
+## Table of Contents
+*  [How to Participate](#how-to-participate) 
+* [Stay in Touch](#stay-in-touch) 
+* [Presentation Slides](#presentation-slides) 
+* [Agenda](#agenda) 
+* [Hands-On Exercises](#hands-on-exercises) 
+* [Resources from Presentations](#resources-from-presentations) 
+* [Acknowledgements](#acknowledgements) 
+
+---
+
 ## How to Participate
 
-The main presentations have been pre-recorded.  Please use the chat tool to ask questions during the presentations. The speaker and the rest of the tutorial team will be monitoring and will respond.  During the breaks, we will be available for live Q&A (also via chat) and will provide some live demos of concepts in the hands-on exercises
-Participation in the exercises is optional – we know you need breaks too.
+* Most presentations have been pre-recorded, though there are several live sessions interspersed.
 
-## Final Version of Slides
+* Please use the chat tool to ask questions *at any time*. The speaker and the rest of the tutorial team will be monitoring and will respond.  
 
-The final slides will be available at <https://doi.org/10.6084/m9.figshare.12994376> when they are ready.
+* The schedule includes a break in the middle, where we plan to do more Q&A and if there is interest, some demos from the hands-on exercises.  There is also a segment at the end for additional Q&A and demos.
 
+* Participation in the Q&A and demonstrations is optional – we know you need breaks too.
+
+* **Your evaluations are important both to us and to the SC20 organizers.  Please remember to [evaluate us](https://submissions.supercomputing.org/?page=Submit&id=TutorialEvaluation&site=sc20)!**
+
+---
+## Stay in Touch
+
+* If you think of more questions you'd like to ask, or you're not able to participate in the live session, please feel free to email the BSSw tutorial team at <bssw-tutorial@lists.mcs.anl.gov>.
+
+* If you want to do the hands-on exercises on your own, we're happy to provide feedback on your pull requests.
+
+* To find out about future events organized by the IDEAS Productivity Project, you can [subscribe to our mailing list](http://eepurl.com/cQCyJ5) (usually ~2 messages/month).
+
+* For monthly updates on the Better Scientific Software site, subscribe to our [monthly digest](https://bssw.io/pages/receive-our-email-digest).
+
+---
+## Presentation Slides
+
+* The latest version of the slides will always be available at **<https://doi.org/10.6084/m9.figshare.12994376>**.
+
+* This is currently the same version as you may have obtained through SC20.
+
+* Note that these files may include additional slides that will not be discussed during the tutorial, but questions are welcome.
+
+---
 ## Agenda
+
+The live presentation takes place **2:30-6:30pm ET, Tuesday 10 November 2020 (19:30-23:30 UTC)**.
 
 | Time (EST) | Module | Topic | Speaker | Time (UTC) |
 |-----------:|-------:|-------|---------|-----------:|
@@ -39,6 +77,7 @@ The final slides will be available at <https://doi.org/10.6084/m9.figshare.12994
 | 6:05pm-6:10pm | 10 | Summary | David E. Bernholdt, ORNL | 23:05-23:10 |
 | *6:10pm-6:30pm* |  | *Live Q&A and demo of CI hands-on activities* | *David E. Bernholdt and All* | *23:10-23:30* |
 
+---
 ## Hands-On Exercises
 
 ### Module 9: Continuous Integration
@@ -64,11 +103,11 @@ The final slides will be available at <https://doi.org/10.6084/m9.figshare.12994
 A video walk-through of (most of) this exercise is available at: <https://youtu.be/QE4RFp8lGiQ>
 * This video was created by Mark Miller (LLNL) for tutorial at ATPESC earlier this year.  Where he refers to the repository as `hello-numerical-world-atpesc-2020`, substitute `hello-numerical-world-sc20`.
 
-
+---
 ## Resources from Presentations
-*These are the links included in the tutorial presentations, for easier access*
+*These are the links included in the tutorial presentations, included here for easier access*
 
-* Module 0:
+* Module 0: Introduction
   * [Citation for this tutorial](https://dx.doi.org/10.6084/m9.figshare.12994376)
   * [IDEAS Productivity Project](http://ideas-productivity.org)
     * [IDEAS Productivity mailing list](http://eepurl.com/cQCyJ5)
@@ -78,18 +117,18 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
   * [The IDEAS Report](https://exascaleproject.org/better-scientific-productivity-through-better-scientific-software-the-ideas-report)
   * [Tutorial Evaluation Link](https://submissions.supercomputing.org/?page=Submit&id=TutorialEvaluation&site=sc20)
   * [Write to the tutorial authors](mailto:bssw-tutorial@lists.mcs.anl.gov)
-* Module 1:
-* Module 2:
-* Module 3:
-* Module 4:
-* Module 5:
-* Module 6:
-* Module 7:
-* Module 8:
-* Module 9: Continuous Integration
-* Module 10:
-* Module 11:
+* Module 1: Motivation and Overview of Best Practices in HPC Software Development
+* Module 2: Agile Methodologies
+* Module 3: Git Workflows	
+* Module 4: Software Design
+* Module 5: Software Testing 1
+* Module 6: Software Testing 2
+* Module 7: Refactoring
+* Module 8: Continuous Integration
+* Module 9: Reproducibility
+* Module 10: Summary
 
+---
 ## Acknowledgements
 
 The BSSw tutorial is produced by the [IDEAS Productivity project](https://ideas-productivity.org).
