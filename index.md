@@ -14,12 +14,13 @@ This site will provide late-breaking updates and additional information and reso
 
 ---
 ## Table of Contents
-*  [How to Participate](#how-to-participate) 
+* [How to Participate](#how-to-participate) 
 * [Stay in Touch](#stay-in-touch) 
 * [Presentation Slides](#presentation-slides) 
 * [Agenda](#agenda) 
 * [Hands-On Exercises](#hands-on-exercises) 
 * [Resources from Presentations](#resources-from-presentations) 
+* [Requested Citation](#requested-citation)
 * [Acknowledgements](#acknowledgements) 
 
 ---
@@ -34,7 +35,7 @@ This site will provide late-breaking updates and additional information and reso
 
 * Participation in the Q&A and demonstrations is optional – we know you need breaks too.
 
-* **Your evaluations are important both to us and to the SC20 organizers.  Please remember to [evaluate us](https://submissions.supercomputing.org/?page=Submit&id=TutorialEvaluation&site=sc20)!**
+* **Your feedback is important both to us and to the SC20 organizers.  Please remember to [evaluate us](https://submissions.supercomputing.org/?page=Submit&id=TutorialEvaluation&site=sc20)!**
 
 ---
 ## Stay in Touch
@@ -108,7 +109,6 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
 *These are the links included in the tutorial presentations, included here for easier access*
 
 * Module 0: Introduction
-  * [Citation for this tutorial](https://dx.doi.org/10.6084/m9.figshare.12994376)
   * [IDEAS Productivity Project](http://ideas-productivity.org)
     * [IDEAS Productivity mailing list](http://eepurl.com/cQCyJ5)
   * [Better Scientific Software site](https://bssw.io)
@@ -118,6 +118,7 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
   * [Tutorial Evaluation Link](https://submissions.supercomputing.org/?page=Submit&id=TutorialEvaluation&site=sc20)
   * [Write to the tutorial authors](mailto:bssw-tutorial@lists.mcs.anl.gov)
 * Module 1: Motivation and Overview of Best Practices in HPC Software Development
+  * *none*
 * Module 2: Agile Methodologies
 * Module 3: Git Workflows	
 * Module 4: Software Design
@@ -125,8 +126,28 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
 * Module 6: Software Testing 2
 * Module 7: Refactoring
 * Module 8: Continuous Integration
+  * [Exascale Computing Project CI documentation](https://ecp-ci.gitlab.io/)
+  * [Travis CI service](https://travis-ci.com)
+  * [Codecov service](https://codecov.io)
 * Module 9: Reproducibility
 * Module 10: Summary
+  * COVID-19 epidemiology saga
+    * <https://doi.org/10.25561/77482>
+    * <https://www.nicholaslewis.org/imperial-college-uk-covid-19-numbers-dont-seem-to-add-up/>
+    * <https://www.nature.com/articles/d41586-020-01003-6>
+    * <https://www.foxnews.com/world/imperial-college-britain-coronavirus-lockdown-buggy-mess-unreliable>
+    * <https://www.telegraph.co.uk/technology/2020/05/16/coding-led-lockdown-totally-unreliable-buggy-mess-say-experts/>
+    * <https://github.com/mrc-ide/covid-sim/>
+    * <https://philbull.wordpress.com/2020/05/10/why-you-can-ignore-reviews-of-scientific-code-by-commercial-software-developers/amp/>
+    * <http://doi.org/10.5281/zenodo.3865491>
+  * [Productivity and Sustainability Improvement Planning](https://bssw.io/psip)
+  * [Better Scientific Software web site](https://bssw.io/)
+
+---
+## Requested Citation
+The requested citation the overall tutorial is: David E. Bernholdt, Anshu Dubey, Patricia A. Grubel, Rinku K. Gupta, Better Scientific Software tutorial, in SC ‘20: International Conference for High Performance Computing, Networking, Storage and Analysis, online, 2020. DOI: [10.6084/m9.figshare.12994376](https://doi.org/10.6084/m9.figshare.12994376)
+
+Individual modules may be cited as *Speaker*, *Module Title*, in Better Scientific Software tutorial…
 
 ---
 ## Acknowledgements
