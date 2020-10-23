@@ -130,6 +130,8 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
 * Module 3: Git Workflows	
 * Module 4: Software Design
 * Module 5: Software Testing 1
+  * Tutorials for code coverage: [Online Tutorial](https://github.com/amklinv/morpheus), [Another example](https://github.com/jrdoneal/infrastructure)
+  * [Useful How-to resources on test and test suites on ideas-productivity.org](https://ideas-productivity.org/resources/howtos/)
 * Module 6: Software Testing 2
 * Module 7: Refactoring
 * Module 8: Continuous Integration
