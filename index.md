@@ -127,7 +127,12 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
     * [The Agile Samurai: How Agile Masters Deliver Great Software, by Jonathan Rasmusson](https://www.amazon.com/dp/1934356581/ref=cm_sw_r_cp_ep_dp_ClBABbNGS7ZKS)
     * [Getting Things Done: The Art of Stress-Free Productivity, by David Allen](https://www.amazon.com/dp/0143126563/ref=cm_sw_r_cp_ep_dp_apBABbT2YZMMK)
     * [Code Complete: A Practical Handbook of Software Construction, by Steve McConnell](https://www.amazon.com/dp/0735619670/ref=cm_sw_r_cp_ep_dp_CkBABbXJWS8KV)
-* Module 3: Git Workflows	
+* Module 3: Git Workflows
+  * [Atlassian/BitBucket (Comparing Workflows)](https://www.atlassian.com/git/tutorials/comparing-workflows)
+  * [Git Flow (Driessen's Original Blog)](https://nvie.com/posts/a-successful-git-branching-model/)
+      * [Git extensions](https://github.com/nvie/gitflow)
+  * [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
+  * [GitLab Flow](https://docs.gitlab.com/ee/workflow/gitlab_flow.html)
 * Module 4: Software Design
 * Module 5: Software Testing 1
   * Tutorials for code coverage: [Online Tutorial](https://github.com/amklinv/morpheus), [Another example](https://github.com/jrdoneal/infrastructure)
@@ -139,6 +144,19 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
   * [Travis CI service](https://travis-ci.com)
   * [Codecov service](https://codecov.io)
 * Module 9: Reproducibility
+  * [Floating Point Analysis Tools](http://fpanalysistools.org/)
+  * [Code Ocean (Cloud platforms - publish and reproduce research code and data)](https://codeocean.com/)
+  * DOIs and hosting of data, code, documents:
+     * [Zenodo](https://zenodo.org/)
+     * [FigShare](https://figshare.com/)
+  * [National Science Foundation Data Management Plan Requirements](https://www.nsf.gov/bfa/dias/policy/dmp.jsp)
+  * [SC20 Transparency and Reproducibility Initiative](https://sc20.supercomputing.org/submit/transparency-reproducibility-initiative/)
+  * [ACM Transactions on Mathematical Software (TOMS)](http://toms.acm.org/replicated-computational-results.cfm)
+  * [ACM Artifact Review and Badging](https://www.acm.org/publications/policies/artifact-review-and-badging-current)
+  * [ National Information Standards Organization (NISO) on Reproducibility and Badging](https://www.niso.org/niso-io/2019/01/new-niso-project-badging-scheme-reproducibility-computational-and-computing)
+  * [The FAIR Guiding Principles for Scientific Data Management and Stewardship. Mark D. Wilkinson, et al. 2016](https://doi.org/10.1038/sdata.2016.18)
+  * [Editorial: ACM TOMS Replicated Computational Results Initiative. Michael A. Heroux. 2015](http://dx.doi.org/10.1145/2743015)
+  * [Simple experiments in reproducibility and technical trust by Mike Heroux and students (work in progress)](https://betterscientificsoftware.github.io/Trust-Tools/)
 * Module 10: Summary
   * COVID-19 epidemiology saga
     * <https://doi.org/10.25561/77482>
