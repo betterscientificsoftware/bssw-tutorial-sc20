@@ -134,11 +134,14 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
   * [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
   * [GitLab Flow](https://docs.gitlab.com/ee/workflow/gitlab_flow.html)
 * Module 4: Software Design
+  * [Related Article] (https://link.springer.com/chapter/10.1007/978-3-319-27308-2_19)
 * Module 5: Software Testing 1
   * Tutorials for code coverage: [Online Tutorial](https://github.com/amklinv/morpheus), [Another example](https://github.com/jrdoneal/infrastructure)
   * [Useful How-to resources on test and test suites on ideas-productivity.org](https://ideas-productivity.org/resources/howtos/)
 * Module 6: Software Testing 2
+  * [Related Articles:1](https://ieeexplore.ieee.org/abstract/document/8449015),[2](https://onlinelibrary.wiley.com/doi/abs/10.1002/spe.2220)
 * Module 7: Refactoring
+  * [Related Article](https://link.springer.com/article/10.1007/s42979-020-0077-x)
 * Module 8: Continuous Integration
   * [Exascale Computing Project CI documentation](https://ecp-ci.gitlab.io/)
   * [Travis CI service](https://travis-ci.com)
