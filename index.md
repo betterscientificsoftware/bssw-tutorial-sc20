@@ -134,7 +134,7 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
   * [GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
   * [GitLab Flow](https://docs.gitlab.com/ee/workflow/gitlab_flow.html)
 * Module 4: Software Design
-  * [Related Article] (https://link.springer.com/chapter/10.1007/978-3-319-27308-2_19)
+  * [Related Article](https://link.springer.com/chapter/10.1007/978-3-319-27308-2_19)
 * Module 5: Software Testing 1
   * Tutorials for code coverage: [Online Tutorial](https://github.com/amklinv/morpheus), [Another example](https://github.com/jrdoneal/infrastructure)
   * [Useful How-to resources on test and test suites on ideas-productivity.org](https://ideas-productivity.org/resources/howtos/)
