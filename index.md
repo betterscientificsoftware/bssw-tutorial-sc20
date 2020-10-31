@@ -155,7 +155,7 @@ Cloning into 'hello-numerical-work-sc20' ...
    remote: 
    To github.com:<your repo name>/hello-numerical-world-sc20.git
     * [new branch]      issue-1000 -> issue-1000
-
+```
 7. Issue pull request to upstream repository 
    - Visit your repository on github  
    [compare branches](images/03-git-br-compare.png)  
