@@ -52,10 +52,10 @@ This site will provide late-breaking updates and additional information and reso
 ## Presentation Slides
 
 * The latest version of the slides will always be available at **<https://doi.org/10.6084/m9.figshare.12994376>**.
+  - Note that these files may include additional slides that will not be discussed during the tutorial, but questions are welcome.
 
-* This is currently the same version as you may have obtained through SC20.
-
-* Note that these files may include additional slides that will not be discussed during the tutorial, but questions are welcome.
+* Latest version in FigShare: v2.  Differences from handouts uploaded to SC20 (v1):
+  - Corrected "License, Citation, and Acknowledgements" slides in modules 02 and 05.
 
 ---
 ## Agenda
@@ -81,16 +81,36 @@ The live presentation takes place **2:30-6:30pm ET, Tuesday 10 November 2020 (19
 ---
 ## Hands-On Exercises
 
+### Introduction
+
+The hands-on exercises for this tutorial are based around a simple numerical model using the one-dimensional heat equation.  The example is described briefly in the repository's [README](https://github.com/betterscientificsoftware/hello-numerical-world-sc20#readme) file, and in greater detail in the ATPESC [Hands-On lesson](https://xsdk-project.github.io/MathPackagesTraining2020/lessons/hand_coded_heat/).  The ATPESC version focuses on the numerical aspects of the model.  But for the Better Scientific Software tutorial, we're focused on how to make the software better from a quality perspective, so **you don't need to understand the math to do these exercises**.
+
+The repository you'll be working with is on GitHub: [betterscientificsoftware/hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20).
+*Note: most of the screenshots will refer to the generic "hello-numerical-world" repository rather than the one specifically for this tutorial.*
+
+
+#### Overview of Hands-On Exercise Goals
+* **Module 2: Agile Methodologies.**  You'll use GitHub issues and project boards to setup a simple "personal kanban" board.
+* **Module 3: Git Workflows.** You'll fork our hello-numerical-world repository, create a feature branch, and make a pull request
+* **Module 8: Continuous Integration.** You'll establish a simple continuous integration workflow and then refine it, adding code coverage assessment
+
+#### Prerequisites
+To complete all of these exercises, you'll need:
+* A [GitHub](https://github.com) account (first used in Module 2)
+* A [Travis-CI](https://travis-ci.com) account linked to your GitHub account (first used in Module 8)
+* A [Codecov](https://codecov.io) account linked to your GitHub account (first used in Module 8)
+
 ### Module 3: Git Workflows 
 #### Prerequisites
 * A [GitHub](https://github.com) account
 
+#### Goal: To fork a repo, create a branch and make a pull request
+
 #### Instructions 
-#### To fork a repo, create a branch and make a pull request
 **Note: Screen shots show forking hello-numerical-world; for this tutorial fork hello-numerical-world-sc20**  
 1. Fork repository hello-numerical-world-sc20: [(fork example)](images/03-git-fork.png)  
   - Click on the following link bellow and hit the fork button in the upper right corner:  
-[hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20) -  **repo not in place yet**  
+[hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20)
   - Choose your personal repo to fork into.  
   - Click on arrow next to code for path to clone. see [(find path to clone example)](images/03-git-path-to-clone.png)  
   - Click on ssh.  
@@ -169,7 +189,7 @@ Cloning into 'hello-numerical-work-sc20' ...
 * A [Codecov](https://codecov.io) account linked to your GitHub account
 
 #### Instructions
-1. Fork the hello-numerical-world-sc20 repository
+1. Fork the [hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20) repository
 2. Add a .travis.yml file to run ‘make check’
 3. Submit a PR to us
 4. Add code coverage verification using codecov.io
