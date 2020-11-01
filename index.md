@@ -27,6 +27,8 @@ This site will provide late-breaking updates and additional information and reso
 
 ## How to Participate
 
+* [Registration](https://sc20.supercomputing.org/attend/register/) for the tutorial program ("TUT") is required.
+
 * Most presentations have been pre-recorded, though there are several live sessions interspersed.
 
 * Please use the chat tool to ask questions *at any time*. The speaker and the rest of the tutorial team will be monitoring and will respond.  
@@ -40,9 +42,9 @@ This site will provide late-breaking updates and additional information and reso
 ---
 ## Stay in Touch
 
-* If you think of more questions you'd like to ask, or you're not able to participate in the live session, please feel free to email the BSSw tutorial team at <bssw-tutorial@lists.mcs.anl.gov>.
+* After the tutorial, or if you're not able to participate in the live session, please feel free to email the BSSw tutorial team at <bssw-tutorial@lists.mcs.anl.gov>.
 
-* If you want to do the hands-on exercises on your own, we're happy to provide feedback on your pull requests.
+* If you want to do the [hands-on exercises](#hands-on-exercises) on your own, we're happy to provide feedback on your pull requests.
 
 * To find out about future events organized by the IDEAS Productivity Project, you can [subscribe to our mailing list](http://eepurl.com/cQCyJ5) (usually ~2 messages/month).
 
@@ -88,122 +90,16 @@ The hands-on exercises for this tutorial are based around a simple numerical mod
 The repository you'll be working with is on GitHub: [betterscientificsoftware/hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20).
 *Note: most of the screenshots will refer to the generic "hello-numerical-world" repository rather than the one specifically for this tutorial.*
 
-
-#### Overview of Hands-On Exercise Goals
-* **Module 2: Agile Methodologies.**  You'll use GitHub issues and project boards to setup a simple "personal kanban" board.
-* **Module 3: Git Workflows.** You'll fork our hello-numerical-world repository, create a feature branch, and make a pull request
-* **Module 8: Continuous Integration.** You'll establish a simple continuous integration workflow and then refine it, adding code coverage assessment
-
 #### Prerequisites
 To complete all of these exercises, you'll need:
 * A [GitHub](https://github.com) account (first used in Module 2)
 * A [Travis-CI](https://travis-ci.com) account linked to your GitHub account (first used in Module 8)
 * A [Codecov](https://codecov.io) account linked to your GitHub account (first used in Module 8)
 
-### Module 3: Git Workflows 
-#### Prerequisites
-* A [GitHub](https://github.com) account
-
-#### Goal: To fork a repo, create a branch and make a pull request
-
-#### Instructions 
-**Note: Screen shots show forking hello-numerical-world; for this tutorial fork hello-numerical-world-sc20**  
-1. Fork repository hello-numerical-world-sc20: [(fork example)](images/03-git-fork.png)  
-  - Click on the following link bellow and hit the fork button in the upper right corner:  
-[hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20)
-  - Choose your personal repo to fork into.  
-  - Click on arrow next to code for path to clone. see [(find path to clone example)](images/03-git-path-to-clone.png)  
-  - Click on ssh.  
-  - Copy path to clipboard (use path in command below).  
-2. Clone the fork (on command line)  
-```
-   $git clone git@github.com:<your repo name>/hello-numerical-world-sc20.git 
-Cloning into 'hello-numerical-work-sc20' ...
-.
-.
-```
-3. Create branch  
-```
-   $cd hello-numerical-world-sc20
-   $git checkout -b issue-1000
-   Switched to a new branch 'issue-1000'
-```
-4. Make Modification (use your favorite editor)  
-```
-   $vi README.md
-   $ git diff
-   diff --git a/README.md b/README.md
-   index 3cd1a3c..b44c57e 100644
-   --- a/README.md
-   +++ b/README.md
-   @@ -22,7 +22,7 @@ is known as the _Diffusion Equation_ and also the [_Heat Equation_](https://en.w
-    
-    ### Simplifying Assumptions
-    
-   -To make the problem tractable for this lesson, we make some simplifying assumptions...
-   +To make the problem tractable for this lesson, we make some simplifying assumptions:
-```
-```
-   $ git add README.md 
-   $ git commit -m "Replace ... with :"
-   [issue-1000 2271b74] Replace ... with :
-    1 file changed, 1 insertion(+), 1 deletion(-)
-```
-5. Useful git commands to check repo
-```
-   $git remote -vv
-   origin	git@github.com:<your repo name>/hello-numerical-world-sc20.git (fetch)
-   origin	git@github.com:<your repo name>/hello-numerical-world-sc20.git (push)
-
-   $git branch
-   * issue-1000
-     main
-```
-6. Push change to fork
-```
-   $ git push origin issue-1000
-   Enumerating objects: 5, done.
-   Counting objects: 100% (5/5), done.
-   Delta compression using up to 8 threads
-   Compressing objects: 100% (3/3), done.
-   Writing objects: 100% (3/3), 300 bytes | 300.00 KiB/s, done.
-   Total 3 (delta 2), reused 0 (delta 0)
-   remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
-   remote: 
-   remote: Create a pull request for 'issue-1000' on GitHub by visiting:
-   remote:      https://github.com/<your repo name>/hello-numerical-world-sc20/pull/new/issue-1000
-   remote: 
-   To github.com:<your repo name>/hello-numerical-world-sc20.git
-    * [new branch]      issue-1000 -> issue-1000
-```
-7. Issue pull request to upstream repository 
-   - Visit your repository on github  
-   [compare branches](images/03-git-br-compare.png)  
-   [pull request](images/03-git-pr.png)  
-   [for pull request reviewer](images/03-git-pr-review.png)  
-
-### Module 9: Continuous Integration
-#### Prerequisites
-* A [GitHub](https://github.com) account
-* A [Travis-CI](https://travis-ci.com) account linked to your GitHub account
-* A [Codecov](https://codecov.io) account linked to your GitHub account
-
-#### Instructions
-1. Fork the [hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20) repository
-2. Add a .travis.yml file to run ‘make check’
-3. Submit a PR to us
-4. Add code coverage verification using codecov.io
-    1. You need to tell the compiler and linker to generate the code coverage report
-    2. Once the tests are finished executing, you need to upload the coverage files to codecov.io
-5. Observe code coverage results when updated PR is tested
-6. Increase test coverage by changing ‘make check’ to ‘make check_all’
-7. Observe changes in code coverage results when updated PR is tested
-    - Also observe the changes in the time required to execute the more extensive tests
-8. Extra credit: Make the CI test fail if code coverage drops
-    - Hint: read codecov.io documentation
-
-A video walk-through of (most of) this exercise is available at: <https://youtu.be/QE4RFp8lGiQ>
-* This video was created by Mark Miller (LLNL) for tutorial at ATPESC earlier this year.  Where he refers to the repository as `hello-numerical-world-atpesc-2020`, substitute `hello-numerical-world-sc20`.
+#### List of Hands-On Exercises
+* **[Module 2: Agile Methodologies](handson-m02-agile.md).**  You'll use GitHub issues and project boards to setup a simple "personal kanban" board.
+* **[Module 3: Git Workflows](handson-m03-git-workflows.md).** You'll fork our hello-numerical-world repository, create a feature branch, and make a pull request
+* **[Module 8: Continuous Integration](handson-m08-continuous-integration.md).** You'll establish a simple continuous integration workflow and then refine it, adding code coverage assessment
 
 ---
 ## Resources from Presentations
