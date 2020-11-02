@@ -4,7 +4,7 @@
 
 layout: home
 ---
-# Hands-On: Module 3: Git Workflows 
+# Hands-On Exercise 3: Git Workflows 
 
 ## Goals
 To fork a repo, create a branch and make a pull request

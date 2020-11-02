@@ -4,7 +4,7 @@
 
 layout: home
 ---
-# Hands-On: Module 8: Continuous Integration
+# Hands-On Exercise 8: Continuous Integration
 ## Goals
 You'll establish a simple continuous integration workflow and then refine it, adding code coverage assessment
 

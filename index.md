@@ -87,16 +87,13 @@ The live presentation takes place **2:30-6:30pm ET, Tuesday 10 November 2020 (19
 
 The hands-on exercises for this tutorial are based around a simple numerical model using the one-dimensional heat equation.  The example is described briefly in the repository's [README](https://github.com/betterscientificsoftware/hello-numerical-world-sc20#readme) file, and in greater detail in the ATPESC [Hands-On lesson](https://xsdk-project.github.io/MathPackagesTraining2020/lessons/hand_coded_heat/).  The ATPESC version focuses on the numerical aspects of the model.  But for the Better Scientific Software tutorial, we're focused on how to make the software better from a quality perspective, so **you don't need to understand the math to do these exercises**.
 
+For the purposes of the BSSw hands-on exercises, you should imagine you've inherited an early version of the hello-numerical-world software from a colleague who's left the project, and you've been assigned to get it into better shape so that it can be used in the next [ATPESC](https://extremecomputingtraining.anl.gov/) summer school.
+
 The repository you'll be working with is on GitHub: [betterscientificsoftware/hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20).
 *Note: most of the screenshots will refer to the generic "hello-numerical-world" repository rather than the one specifically for this tutorial.*
 
-#### Prerequisites
-To complete all of these exercises, you'll need:
-* A [GitHub](https://github.com) account (first used in Module 2)
-* A [Travis-CI](https://travis-ci.com) account linked to your GitHub account (first used in Module 8)
-* A [Codecov](https://codecov.io) account linked to your GitHub account (first used in Module 8)
-
-#### List of Hands-On Exercises
+### List of Hands-On Exercises
+* **[Setting up the Prerequisites](handson-m00-prerequisites.md)**. Setup the accounts needed for these exercises.
 * **[Module 2: Agile Methodologies](handson-m02-agile.md).**  You'll use GitHub issues and project boards to setup a simple "personal kanban" board.
 * **[Module 3: Git Workflows](handson-m03-git-workflows.md).** You'll fork our hello-numerical-world repository, create a feature branch, and make a pull request
 * **[Module 8: Continuous Integration](handson-m08-continuous-integration.md).** You'll establish a simple continuous integration workflow and then refine it, adding code coverage assessment
