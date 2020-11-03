@@ -93,10 +93,12 @@ The repository you'll be working with is on GitHub: [betterscientificsoftware/he
 *Note: most of the screenshots will refer to the generic "hello-numerical-world" repository rather than the one specifically for this tutorial.*
 
 ### List of Hands-On Exercises
-* **[Setting up the Prerequisites](handson-m00-prerequisites.md)**. Setup the accounts needed for these exercises.
-* **[Module 2: Agile Methodologies](handson-m02-agile.md).**  You'll use GitHub issues and project boards to setup a simple "personal kanban" board.
-* **[Module 3: Git Workflows](handson-m03-git-workflows.md).** You'll fork our hello-numerical-world repository, create a feature branch, and make a pull request
-* **[Module 8: Continuous Integration](handson-m08-continuous-integration.md).** You'll establish a simple continuous integration workflow and then refine it, adding code coverage assessment
+*Note that the exercise numbers align with the presentation modules.  Not every module has exercises (yet).*
+* **[Exercise 0: Setting up the Prerequisites](handson-m00-prerequisites.md)**. Setup the accounts needed for these exercises.
+* **[Exercise 2: Agile Methodologies](handson-m02-agile.md).**  You'll use GitHub issues and project boards to setup a simple "personal kanban" board.
+* **[Exercise 3: Git Workflows](handson-m03-git-workflows.md).** You'll fork our hello-numerical-world repository, create a feature branch, and make a pull request
+* **[Exercise 7a: Agile Redux](handson-m07a-agile-redux.md).**  You'll create epic, story, and task issues for the refactoring task and track them on a kanban board
+* **[Exercise 8: Continuous Integration](handson-m08-continuous-integration.md).** You'll establish a simple continuous integration workflow and then refine it, adding code coverage assessment
 
 ---
 ## Resources from Presentations

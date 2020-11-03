@@ -7,7 +7,7 @@ layout: home
 # Hands-On Exercise 7a: Agile Redux
 
 ## Goals
-Create epic, story, and task issues for the refactoring task
+Create epic, story, and task issues for the refactoring task and track them on a kanban board
 
 ## Prerequisites
 * A [GitHub](https://github.com) account
