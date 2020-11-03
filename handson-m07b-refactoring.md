@@ -4,10 +4,11 @@
 
 layout: home
 ---
-# Hands-On Exercise 7b: Refactoring
+# Hands-On Exercise 7b & 7c: Refactoring
 
 ## Goals
-Refactor a poorly structured code to a cleaner, more reusable version.
+Exercise 7b: Refactoring the code to enable addition of new integration methods without having to modify the source code.
+Exercise 7c: Refactor a poorly structured code to a cleaner, more reusable version.
 
 ## Prerequisites
 * A [GitHub](https://github.com) account
@@ -16,15 +17,22 @@ Refactor a poorly structured code to a cleaner, more reusable version.
    - Your fork of the tutorial repository should be cloned in this working environment (covered in exercise 3)
 
 ## Background
-In Module 7 of the tutorial presentations, we discuss the refactoring process.  In this exercise, your task will be to refactor the code you've inherited.  Exercise 7a is a planning activity for this work, which uses the epic-story-task model with GitHub issues and a project board.  You are encouraged to work through 7a and this exercise in tandem, or to complete 7a first.
+In Module 7 of the tutorial presentations, we discuss the refactoring process. In the first exercise you are given a modular well written code that supports multiple integration methods, your task is to refactor is so that another integration method can be added without having to modify the source code in future. 
+
+In the second exercise, your task will be to refactor the code you've inherited.  Exercise 7a is a planning activity for this work, which uses the epic-story-task model with GitHub issues and a project board.  You are encouraged to work through 7a and this exercise in tandem, or to complete 7a first.
 
 You've inherited the heat equation example code `heatAll.C` from a colleague who's left your project.  Your task is to refactor it to make it cleaner and more reusable.
 
-*Note: there are example results in the repository, but they are not a unique solution -- yours may be different.*
+*Note: the code used in exercise 1 is a possible solution for exercise 2, but it is not a unique solution -- yours may be different.*
 
-## Instructions 
+## Instructions for exercise 1
 
-Task A. The code currently has three different finite-difference schemes to update the solution to the heat equation: `crankn` (Crank-Nicolson), `ftcs` (forward-time central-space), and `upwind15` (upwind).  We'd like the code to be more flexible so that other approaches can be added to update the solution without having to modify the main heat equation driver every time.  More specifically, the `update_solution` interface needs to be generalized.
+The code currently has three different finite-difference schemes to update the solution to the heat equation: `crankn` (Crank-Nicolson), `ftcs` (forward-time central-space), and `upwind15` (upwind).  We'd like the code to be more flexible so that other approaches can be added to update the solution without having to modify the main heat equation driver every time.  More specifically, the `update_solution` interface needs to be generalized. 
+
+Relevant files in this exercise are: 
+Header files -- Double.H	heat.H	
+Source files --  args.C		crankn.C	exact.C		ftcs.C		heat.C		upwind15.C	utils.C
+Build file -- makefile
 
 All refactoring exercises should begin by checking the test coverage for the part of the code you'll be working on and gathering baseline results with the original code.
 
@@ -82,4 +90,25 @@ Run ./heat runame=“ftcs_results”
 Make heat2
 Run ./heat runame=“upwind_results”
 Verify against baseline
+
+## Instructions for exercise 2
+
+1. Create a new directory and copy the original makefile from exercise 1, and heatAll.C into the new directory. This will be your working area. Work in tandem with exercise 7a to plan your work.
+
+2. Compile heatAll.C with coverage flags enabled similar to exercise 1. Run the executable with various permutations of input arguments, saving each output as a baseline for comparison until you have 100% coverage.
+
+3. Make a decision about how many files you wish to split the code into. A good rule of thumb is to start with a different file for each category of functions. An example would be to create integrate.C, a utils.C and a main.C to which you copy from heatAll.C functions that belong in each category. 
+
+4. Make a decision about which variable and constants you wish to have available globally and which you wish to keep local. Create ".H" files for global variables.
+
+5. In each of the new ".C" file add "extern" interfaces for functions that are not in the same file, and "include" statements for any header files you might wish to include. 
+
+6. In the makefile replace existing filenames with the ones you have just created. 
+
+7. Compile and execute the refactored code in all permutations used in step 2 and verify against the corresponding baselines.
+
+8. If you are happy with the modularity of your refactored code you are done. If you wish to further modularize repeat steps 3-7 until you have the reached your refactoring objectives.
+
+
+
 
