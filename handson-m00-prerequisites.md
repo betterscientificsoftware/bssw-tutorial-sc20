@@ -28,6 +28,7 @@ layout: home
    - Choose "Sign up with GitHub"
    - On the  "Authorize Codecov" page, click to "Authorize codecov"  
 
-4. You'll need (access to) a basic development environment, supporting editing, compiling, and executing simple C language code, and a git installation.
+4. You'll need (access to) a basic development environment, supporting editing, compiling, and executing simple C++ language code, and a git installation.
    - This may be available on your local system (especially Mac or Linux)
    - A remote development environment that you can access via ssh will also work fine.
+   - The code you'll work with is very C-like, and the exercises don't require extensive knowledge of the language (i.e., Fortran programmers should not have much trouble).
