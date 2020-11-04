@@ -99,7 +99,7 @@ The repository you'll be working with is on GitHub: [betterscientificsoftware/he
 * **[Exercise 3: Git Workflows](handson-m03-git-workflows.md).** You'll fork our hello-numerical-world repository, create a feature branch, and make a pull request
 * **[Exercise 7a: Agile Redux](handson-m07a-agile-redux.md).**  You'll create epic, story, and task issues for the refactoring task and track them on a kanban board
 * **[Exercise 7b: Refactoring Part 1](handson-m07b-refactoring1.md).**  You'll perform a small, well-defined refactoring exercise
-* **[Exercise 7c: Refactoring Part 2](handson-m07c-refactoring1.md).**  You'll perform a a more open-ended refactoring exercise
+* **[Exercise 7c: Refactoring Part 2](handson-m07c-refactoring2.md).**  You'll perform a a more open-ended refactoring exercise
 * **[Exercise 8: Continuous Integration](handson-m08-continuous-integration.md).** You'll establish a simple continuous integration workflow and then refine it, adding code coverage assessment
 
 ---

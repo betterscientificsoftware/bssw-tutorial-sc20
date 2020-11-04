@@ -12,6 +12,9 @@ Refactor a poorly structured code to a cleaner, more reusable version.
 ## Prerequisites
 * A [GitHub](https://github.com) account
 * A fork of the [betterscientificsoftware/hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20) repository in your account (covered in exercise 3)
+	- The files relevant to this exercise are:
+		- Header files: `Double.H`, `heat.H`
+		- Source file: `heatAll.C`
 * Access to a basic software development environment for C++ languge
    - Your fork of the tutorial repository should be cloned in this working environment (covered in exercise 3)
 
