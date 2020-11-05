@@ -7,7 +7,7 @@ layout: home
 # Exercise 2: Agile Methodologies
 
 ## Goals
-To fork a repo, create a branch and make a pull request
+To create an issue-only github repo, define a team policy, create issues, initiation checklist and a kanban board
 
 ## Prerequisites
 * A [GitHub](https://github.com) account
@@ -15,7 +15,7 @@ To fork a repo, create a branch and make a pull request
 ## Instructions 
 
 ### Step 1: Create Issues-only GitHub repo
-1. Go to https://github.com/username . Example: https://github.com/maherou
+1. Go to https://github.com/username .For example: https://github.com/maherou
 
 2. Create new repo:
    - Click on “+” (upper right).
@@ -38,41 +38,40 @@ To fork a repo, create a branch and make a pull request
   
 * Community version: 
   - http://contributor-covenant.org
-  - Policy is living document:
-  - Informal good practices added.
-  - Avoidable bad situations addressed.
+  - Policy is living document
+    - Informal good practices added.
+    - Avoidable bad situations addressed.
 
 ### Step 3a: Create Issues
 1. Select the Issues tab.
 2. Click on New Issue.
-3. Type in task statement 1 (from list).
-   - Type in title only.
+3. Type in the task statement in the title and body.
 4. Click Submit new issue
 5. Repeat.
 
 ### Step 3b: Create Initiation Checklist
 1. Select the Issues tab.
 2. Click on New Issue.
-3. Select a classmate.
-4. Type in title: Pat Evans Initiation Checklist
-5. Add checklist items:
+3. Type in title: Our groups Initiaton Checklist.
+4. Add checklist items in the body:
    - Use syntax: [  ]  Description
   
 ### Step 4: Create Kanban Board
-1. Select Projects tab
-2. Click New Project
-3. Use title 
+1. Select Projects tab.
+2. Click Create A Project.
+3. Use title.
    - Team Kanban board
+4. Select none as Project template.
 4. Add these columns:
    - Backlog, Ready, In progress, In review, Done.
 5. Click on +Add cards (upper right).
    - Move each issue to the proper Kanban column
   
 ### Next Steps: Real Life
-* Create a GitHub Org and set of repos for your team:
-  - Each team member has an individual repo.
-  - Each project has a repo.
-  - One special repo for issues.
+* Create a GitHub Organization and set of repos for your team:
+  - Each team member has an individual repository.
+  - Each project has a repository.
+  - One special repository for issues.
 * Track all work:
   - Use checklists for initiation, exit, any big new effort.
   - Create Kanban board. Keep it current.
