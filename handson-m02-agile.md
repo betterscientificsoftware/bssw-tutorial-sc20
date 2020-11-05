@@ -31,9 +31,11 @@ To fork a repo, create a branch and make a pull request
    - Go to new repo: Issues.
    - Select <> Code tab.
    - Select Add file --> Create new file. Create a file called TeamPolicy.md
+   
 * Questions to address:
   - How members support team?
   - How team supports members?
+  
 * Community version: 
   - http://contributor-covenant.org
   - Policy is living document:
