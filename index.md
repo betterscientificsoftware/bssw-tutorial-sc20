@@ -19,6 +19,7 @@ This site will provide late-breaking updates and additional information and reso
 * [Presentation Slides](#presentation-slides) 
 * [Agenda](#agenda) 
 * [Hands-On Exercises](#hands-on-exercises) 
+* [Supplementary Materials](#supplementary-materials)
 * [Resources from Presentations](#resources-from-presentations) 
 * [Requested Citation](#requested-citation)
 * [Acknowledgements](#acknowledgements) 
@@ -102,7 +103,10 @@ The repository you'll be working with is on GitHub: [betterscientificsoftware/he
 * **[Exercise 7b: Refactoring Part 1](handson-m07b-refactoring1.md).**  You'll perform a small, well-defined refactoring exercise
 * **[Exercise 7c: Refactoring Part 2](handson-m07c-refactoring2.md).**  You'll perform a a more open-ended refactoring exercise
 * **[Exercise 8: Continuous Integration](handson-m08-continuous-integration.md).** You'll establish a simple continuous integration workflow and then refine it, adding code coverage assessment
+---
+## Supplementary Materials
 
+We gave a [full-day version of this tutorial](https://extremecomputingtraining.anl.gov/agenda-2020/#Track-7) for the [Argonne Extreme Scale Training Program](https://extremecomputingtraining.anl.gov/) (ATPESC) in August 2020.  The presentations slides are available at <https://doi.org/10.6084/m9.figshare.12719834>.  If you want to delve a little deeper into some of the topics we're covering, consider checking out these resources.  We want to particularly draw attention to Module 09 Reproducibility, which we were able to spend 45 minutes on, rather than 15 minutes today. Eventually, they will post recordings of all of the sessions.  If you'd like us to notify you when the videos are published, please email us at <bssw-tutorial@lists.mcs.anl.gov>.
 ---
 ## Resources from Presentations
 *These are the links included in the tutorial presentations, included here for easier access*
