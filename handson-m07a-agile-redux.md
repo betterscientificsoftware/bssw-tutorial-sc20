@@ -12,6 +12,7 @@ Create epic, story, and task issues for the refactoring exercises and track them
 ## Prerequisites
 * A [GitHub](https://github.com) account
 * A fork of the [betterscientificsoftware/hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20) repository in your account (covered in exercise 3)
+   - This exercise can be done entirely within the web interface of GitHub.com
 
 ## Background
 In Module 7 of the tutorial presentations, we discuss the refactoring process.  In exercises 7b and 7c, your task will be to actually refactor some code you've inherited.  But before we start on the code, we're going to make a plan in the form of GitHub issues that we can use to track the plan to completion.  You may want to read through those two exercises before starting this one, to get a better feel for the assignments.  In the next two exercises, we encourage you to use the setup you'll create here (issues and project board) to track your progress.

@@ -11,6 +11,7 @@ To fork a repo, create a branch and make a pull request
 
 ## Prerequisites
 * A [GitHub](https://github.com) account
+   - This exercise can actually be completed entirely via the GitHub.com web interface (UI), we recommend using a command-line `git` client if you're interested in doing later exercises that can't be completed through the web UI (e.g., exercises 7b and 7c)
 
 ## Instructions 
 **Note: Screen shots show forking hello-numerical-world; for this tutorial fork hello-numerical-world-sc20**  
