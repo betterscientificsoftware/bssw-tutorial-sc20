@@ -35,7 +35,7 @@ compiler:
 
 script:
   - make check
-  ```
+```
 The configuration file is written in the YANL markup language, which is pretty simple, but can be finicky with respect to indentation.  L1 and L3 of the file specify the environment that Travis CI needs to provide.  L6-L7 specify the command to execute when Travis is triggered.  Travis provides a rich set of capabilities.  You should peruse their documentation to learn more about them.
 
 2. Next you need to create a pull request to add this change to the upstream repository.  Travis is triggered by pull requests (among other things)
