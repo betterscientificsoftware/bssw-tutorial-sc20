@@ -35,7 +35,7 @@ In this case, everyone doing the exercise is doing the same tasks, which wouldn'
    - **Title:** Epic: Refactor code for enhanced modularity
    - **Description:** The heat equation code needs refactoring to improve modularity. Specifically, there are utilities that could be generalized and used with for other applications. Also, the integration function is currently hard-coded. In the future, we want to use alternative integration functions, so we should generalize the interface for this function.
 
-    We suggest breaking the epic into two stories, representing distinct results that the customer would find useful. Each of these stories will need its own GitHub issue.  Each issue should include a definition of done -- how will we know when the work of the story is completed -- and the individual tasks needed to do to the work.
+We suggest breaking the epic into two stories, representing distinct results that the customer would find useful. Each of these stories will need its own GitHub issue.  Each issue should include a definition of done -- how will we know when the work of the story is completed -- and the individual tasks needed to do to the work.
 
 **Step 2.** Create a GitHub issue for the first story
    - **Title:** Story: Separate out utilities
