@@ -31,25 +31,26 @@ All refactoring exercises should begin by checking the test coverage for the par
 
 **Step 1.** In your working copy of the repository, in the `makefile`, add the `-coverage` flag to the rules to generate object files and to link the final `heat` application.
 
-    ```
-    # Implicit rule for object files
-    %.o : %.C
-    	$(CXX) -coverage -c $(CXXFLAGS) $(CPPFLAGS) $< -o $@
-    
-    # Linking the final heat app
-    heat: $(OBJ)
-    	$(CXX) -coverage -o heat $(OBJ) $(LDFLAGS) -lm
-    ```
+```
+# Implicit rule for object files
+%.o : %.C
+	$(CXX) -coverage -c $(CXXFLAGS) $(CPPFLAGS) $< -o $@
+
+# Linking the final heat app
+heat: $(OBJ)
+	$(CXX) -coverage -o heat $(OBJ) $(LDFLAGS) -lm
+```
 
 then build the `heat` application by typing  `make`.
 
 **Step 2.** Run
 
-    ```
-    ./heat runame="ftcs_results"
-    gcov heat.C
-    cp heat.C.gcov heat-ftcs.C.gcov
-    ```
+```
+./heat runame="ftcs_results"
+gcov heat.C
+cp heat.C.gcov heat-ftcs.C.gcov
+```
+
 and examine the resulting `heat-ftcs.C.gcov` file.  The output of gcov is a listing of the code annotated on the left with the following notations:
 - a dash indicates a non-executable line, 
 - a number indicates the number of time the line was executed, and 
@@ -58,15 +59,15 @@ You'll notice that the calls to the `update_solution_upwind15` and `update_solut
 
 **Step 3.** Collect coverage and baseline results for the other update schemes.
 
-    ```
-    ./heat alg="upwind15" runame="upwind_results"
-    gcov heat.C
-    cp heat.C.gcov heat-upwind15.C.gcov
-    
-    ./heat alg="crankn" runame="crankn_results"
-    gcov heat.C
-    cp heat.C.gcov heat-crankn.C.gcov
-    ```
+```
+./heat alg="upwind15" runame="upwind_results"
+gcov heat.C
+cp heat.C.gcov heat-upwind15.C.gcov
+
+./heat alg="crankn" runame="crankn_results"
+gcov heat.C
+cp heat.C.gcov heat-crankn.C.gcov
+```
 
 Compare the three gcov output to convince yourself that between the three test cases you've run, you have good coverage for the regions of code on which you're going to work.
 
@@ -86,14 +87,14 @@ If you look at the implementations of the three updaters, in the files `ftcs.C`,
 
 **Step 5.** First, we need to define a new generalized interface to the updaters that will work for all of them, which we'll call, simply `update_solution`.  So replace the original interface declarations (L64-80) with a single declaration, for `update_solution` that takes the union of the arguments required by the three updaters.
 
-    ```
-    extern bool
-    update_solution(int n,
-    	Double *curr, Double const *last,
-    	Double alpha, Double dx, Double dt,
-    	Double const *cn_Amat,
-    	Double bc_0, Double bc_1);
-    ```
+```
+extern bool
+update_solution(int n,
+	Double *curr, Double const *last,
+	Double alpha, Double dx, Double dt,
+	Double const *cn_Amat,
+	Double bc_0, Double bc_1);
+```
 
 and remove the old implementation of `update_solution`.
 
@@ -103,45 +104,45 @@ and remove the old implementation of `update_solution`.
 
 But now we need to ensure that the dependency is satisfied no matter which updater is linked into the application.  So we need to add null implementations of `initialize_crankn` to the `ftcs.C` and `upwind15.C` files to satisfy that dependency. It is not necessary to generalize the name, but it is probably a good idea to add comments explaining why a do-nothing routine with a name that implies association with the Crank-Nicolson method appears in the file implementing the upwind scheme, for example.
 
-    ```
-    void
-    initialize_crankn(init n,
-    	Double alpha, Double dx, Double dt,
-    	Double **cn_Amat)
-    {
-    }
-    ```
+```
+void
+initialize_crankn(init n,
+	Double alpha, Double dx, Double dt,
+	Double **cn_Amat)
+{
+}
+```
 
 **Step 8.** Finally, we need to modify the `makefile` to generate three different versions of the executable by linking against the three different updaters. *Note: this solution is not elegant, but it is functional.*
 
-    ```
-    HDR = Double.H
-    SRC1 = heat.C utils.C args.C exact.C ftcs.C
-    SRC2 = heat.C utils.C args.C exact.C upwind15.C
-    SRC3 = heat.C utils.C args.C exact.C crankn.C
-    OBJ1 = $(SRC1:.C=.o)
-    OBJ2 = $(SRC2:.C=.o)
-    OBJ3 = $(SRC3:.C=.o)
-    GCOV1 = $(SRC1:.C=.C.gcov) $(SRC1:.C=.gcda) $(SRC1:.C=.gcno) $(HDR:.H=.H.gcov)
-    GCOV2 = $(SRC2:.C=.C.gcov) $(SRC2:.C=.gcda) $(SRC2:.C=.gcno) $(HDR:.H=.H.gcov)
-    GCOV3 = $(SRC3:.C=.C.gcov) $(SRC3:.C=.gcda) $(SRC3:.C=.gcno) $(HDR:.H=.H.gcov)
-    EXE1 = heat1
-    EXE2 = heat2
-    EXE3 = heat3
+```
+HDR = Double.H
+SRC1 = heat.C utils.C args.C exact.C ftcs.C
+SRC2 = heat.C utils.C args.C exact.C upwind15.C
+SRC3 = heat.C utils.C args.C exact.C crankn.C
+OBJ1 = $(SRC1:.C=.o)
+OBJ2 = $(SRC2:.C=.o)
+OBJ3 = $(SRC3:.C=.o)
+GCOV1 = $(SRC1:.C=.C.gcov) $(SRC1:.C=.gcda) $(SRC1:.C=.gcno) $(HDR:.H=.H.gcov)
+GCOV2 = $(SRC2:.C=.C.gcov) $(SRC2:.C=.gcda) $(SRC2:.C=.gcno) $(HDR:.H=.H.gcov)
+GCOV3 = $(SRC3:.C=.C.gcov) $(SRC3:.C=.gcda) $(SRC3:.C=.gcno) $(HDR:.H=.H.gcov)
+EXE1 = heat1
+EXE2 = heat2
+EXE3 = heat3
 ```
 
 and build all three versions of the application by running 
 
-    ```
-    make heat1 heat2 heat3
-    ```
+```
+make heat1 heat2 heat3
+```
 
 ## Verifying Your Work
 
 **Step 9.** In this case, the changes that you've made to the code should not change the computed results at all.  Verify this by running the new codes and comparing against the baseline results that you collected earlier.
 
-    ```
-    ./heat1 runame=“new_ftcs_results”
-    ./heat2 runame=“new_upwind_results”
-    ./heat3 runame=“new_crankn_results”
-    ```
+```
+./heat1 runame=“new_ftcs_results”
+./heat2 runame=“new_upwind_results”
+./heat3 runame=“new_crankn_results”
+```
