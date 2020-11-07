@@ -23,25 +23,23 @@ The code you worked with in exercise 7b was reasonably well structured.  But it 
 
 ## Instructions
 
-1. Create a new directory and copy `heatAll.C` into it. This will be your working area. Work in tandem with exercise 7a to plan and track your work.
+**Step 1.** Create a new directory and copy `heatAll.C` into it. This will be your working area. Work in tandem with exercise 7a to plan and track your work.
 
-2. Create a `makefile` to build an executable from `heatAll.C`.  If you're not that familiar with makefiles, you might want to adapt the one in the main directory.  In this case all of the code is in the single file `heatAll.C`. Add the `-coverage` flag you used in the previous exercise.
+**Step 2.** Create a `makefile` to build an executable from `heatAll.C`.  If you're not that familiar with makefiles, you might want to adapt the one in the main directory.  In this case all of the code is in the single file `heatAll.C`. Add the `-coverage` flag you used in the previous exercise.
 
-3. Run the executable with various permutations of input arguments, saving each output as a baseline for comparison until you have 100% coverage.
+**Step 3.** Run the executable with various permutations of input arguments, saving each output as a baseline for comparison until you have 100% coverage.
 
-4. Make a decision about how many files you wish to split the code into. 
+**Step 4.** Make a decision about how many files you wish to split the code into. 
 
 A good rule of thumb is to start with a different file for each category of functions. An example would be to create an `integrate.C`, a `utils.C` and a `main.C` to which you copy from `heatAll.C` functions that belong in each category. 
 
-5. Make a decision about which variable and constants you wish to have available globally and which you wish to keep local. Create `.H` files for global variables.
+**Step 5.** Make a decision about which variable and constants you wish to have available globally and which you wish to keep local. Create `.H` files for global variables.
 
-6. In each of the new `.C` file add `extern` interfaces for functions that are not in the same file, and `include` statements for any header files you might wish to include. 
+**Step 6.** In each of the new `.C` file add `extern` interfaces for functions that are not in the same file, and `include` statements for any header files you might wish to include. 
 
-7. In the `makefile` replace existing filenames with the ones you have just created. 
+**Step 7.** In the `makefile` replace existing filenames with the ones you have just created. 
 
-8. Compile and execute the refactored code in all permutations used in step 3 and verify against the corresponding baselines.
-
-If you are happy with the modularity of your refactored code you are done. If you wish to further modularize repeat steps 3-8 until you have the achieved your refactoring objectives.
+**Step 8.** Compile and execute the refactored code in all permutations used in step 3 and verify against the corresponding baselines. If you are happy with the modularity of your refactored code you are done. If you wish to further modularize repeat steps 3-8 until you have the achieved your refactoring objectives.
 
 
 

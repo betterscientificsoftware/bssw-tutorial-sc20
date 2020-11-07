@@ -31,13 +31,13 @@ In this case, everyone doing the exercise is doing the same tasks, which wouldn'
 
 ### Working with GitHub Issues
 
-1. In your chosen workspace, create an issue corresponding to the epic.  Feel free to enter whatever you feel is appropriate.  Here is what we used when we did this exercise ourselves.
+**Step 1.** In your chosen workspace, create an issue corresponding to the epic.  Feel free to enter whatever you feel is appropriate.  Here is what we used when we did this exercise ourselves.
    - **Title:** Epic: Refactor code for enhanced modularity
    - **Description:** The heat equation code needs refactoring to improve modularity. Specifically, there are utilities that could be generalized and used with for other applications. Also, the integration function is currently hard-coded. In the future, we want to use alternative integration functions, so we should generalize the interface for this function.
 
-We suggest breaking the epic into two stories, representing distinct results that the customer would find useful. Each of these stories will need its own GitHub issue.  Each issue should include a definition of done -- how will we know when the work of the story is completed -- and the individual tasks needed to do to the work.
+    We suggest breaking the epic into two stories, representing distinct results that the customer would find useful. Each of these stories will need its own GitHub issue.  Each issue should include a definition of done -- how will we know when the work of the story is completed -- and the individual tasks needed to do to the work.
 
-2. Create a GitHub issue for the first story
+**Step 2.** Create a GitHub issue for the first story
    - **Title:** Story: Separate out utilities
    - **Body:**
       - Definition of done: 
@@ -49,7 +49,7 @@ We suggest breaking the epic into two stories, representing distinct results tha
       - Tasks required
          - *define the tasks you think are required*
 
-3. Create a GitHub issue for the second story
+**Step 3.** Create a GitHub issue for the second story
    - **Title:** Story: Separate out the integration function
    - **Body:**
       - Definition of done: *define this for yourself*
@@ -77,15 +77,15 @@ Unfortunately, GitHub issues don't support hierarchies of issues, such as epic-s
       - For example, you might establish the convention that the first line of the body of a story always references the parent epic.
       - And in the body of the epic, you might list the stories that comprise it, with a cross-reference to the issue number followed by the issue title.
 
-4. Use cross-references, labels, and checklists to make the issues you created above better interlinked and easier to manage.  For things like this, we recommend editing the body of the issues rather than adding comments to the issues.
+**Step 4.** Use cross-references, labels, and checklists to make the issues you created above better interlinked and easier to manage.  For things like this, we recommend editing the body of the issues rather than adding comments to the issues.
 
 ### Working GitHub Project (Kanban) Boards
 
 Next, we're going to setup a simple kanban board that you can use to track the progress of your refactoring work in exercise 7b.
 
-5. Go to the Project tab in your chosen workspace and create a project.  We suggest calling it "Project Management".  Provide a description if you like.  For the Template, select "Basic Kanban".  Click "Create project".  The result should be a project board with columns labeled "To do", "In progress", and "Done".
+**Step 5.** Go to the Project tab in your chosen workspace and create a project.  We suggest calling it "Project Management".  Provide a description if you like.  For the Template, select "Basic Kanban".  Click "Create project".  The result should be a project board with columns labeled "To do", "In progress", and "Done".
    - The To do column starts out with three "notes", which take up a lot of space.  You may want to give them a quick read and then delete them by clicking the ellipsis (three dots) menu and selecting "Delete Note" on each.
 
-6. Add the issues you have created to the project board by clicking the "+ Add cards" button on the top right of the project board, next to the filter widget.  The default search in the popup ("is:open") should display the issues you've created.  One by one, drag each of them to the To do column of the project board.
+**Step 6.** Add the issues you have created to the project board by clicking the "+ Add cards" button on the top right of the project board, next to the filter widget.  The default search in the popup ("is:open") should display the issues you've created.  One by one, drag each of them to the To do column of the project board.
 
-7. While you're working on exercise 7b, use the project board and issues to track your progress.
+**Step 7.** While you're working on exercise 7b, use the project board and issues to track your progress.
