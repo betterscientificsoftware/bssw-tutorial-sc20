@@ -70,7 +70,7 @@ script:
 
 after_success:
   - bash <(curl -s https://codecov.io/bash)
-  ```
+ ```
   The `after_success` block will update the CodeCov.io site with the coverage information from the check that just completed.  This bit of magic is documented in the [Quick Start](https://docs.codecov.io/docs) documentation on Codecov.io.  It is referred to as the "Codecov bash uploader".
 
 Once you commit this change, it is added to your outstanding pull request.  If you switch to the upstream repository and go to your pull request, you'll see the results should now include code coverage information.  Note that the first time you upload to Codecov.io, it has no prior coverage information so it can't provide information about the *change* in coverage represented by the update to the pull request.
