@@ -27,6 +27,7 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
 
 ## Instructions
 1. You'll need to add a configuration file to your repository to tell Travis CI what should be done when it is invoked.  The file must be named `.travis.yml`.  Note the leading `.`.  In unix-like operating systems, this is a hidden file, that won't be displayed in directory listings by default.  But on Windows and in the GitHub web interface, such files are displayed by default.
+
 ```
 language: c++
 
@@ -36,6 +37,7 @@ compiler:
 script:
   - make check
 ```
+
 The configuration file is written in the YANL markup language, which is pretty simple, but can be finicky with respect to indentation.  L1 and L3 of the file specify the environment that Travis CI needs to provide.  L6-L7 specify the command to execute when Travis is triggered.  Travis provides a rich set of capabilities.  You should peruse their documentation to learn more about them.
 
 2. Next you need to create a pull request to add this change to the upstream repository.  Travis is triggered by pull requests (among other things)
@@ -59,6 +61,7 @@ As mentioned, understanding how much of the code you're working with is covered 
 3. Login into your <https://codecov.io> account and add your "hello-numerical-world-sc20" repository to your account.
 
 4. Edit `.travis.yml` to add code coverage to the build, and reporting the results to Codecov.io:
+
 ```
 language: c++
 
@@ -71,7 +74,8 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash)
  ```
-  The `after_success` block will update the CodeCov.io site with the coverage information from the check that just completed.  This bit of magic is documented in the [Quick Start](https://docs.codecov.io/docs) documentation on Codecov.io.  It is referred to as the "Codecov bash uploader".
+
+The `after_success` block will update the CodeCov.io site with the coverage information from the check that just completed.  This bit of magic is documented in the [Quick Start](https://docs.codecov.io/docs) documentation on Codecov.io.  It is referred to as the "Codecov bash uploader".
 
 Once you commit this change, it is added to your outstanding pull request.  If you switch to the upstream repository and go to your pull request, you'll see the results should now include code coverage information.  Note that the first time you upload to Codecov.io, it has no prior coverage information so it can't provide information about the *change* in coverage represented by the update to the pull request.
 
