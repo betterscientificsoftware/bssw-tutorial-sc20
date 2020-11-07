@@ -82,4 +82,4 @@ Once you commit this change, it is added to your outstanding pull request.  If y
 
 **Step 5.** Increase the code coverage by replacing `check` with `check_all` in the `.travis.yml` file.  Observe the changes via the Codecov.io report.  You can also examine the Travis CI logs to see the change in the execution time for the `check` and `check_all` test suites.
 
-** Step 6.** *Extra credit*: Make the CI test file if code coverage drops from the previous version. (Hint: read the [codeco.io documentation](https://docs.codecov.io/docs).)
+**Step 6.** *Extra credit*: Make the CI test file if code coverage drops from the previous version. (Hint: read the [codeco.io documentation](https://docs.codecov.io/docs).)
