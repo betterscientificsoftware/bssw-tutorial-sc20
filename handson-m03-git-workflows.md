@@ -11,31 +11,38 @@ To fork a repo, create a branch and make a pull request
 
 ## Prerequisites
 * A [GitHub](https://github.com) account
-   - This exercise can actually be completed entirely via the GitHub.com web interface (UI), we recommend using a command-line `git` client if you're interested in doing later exercises that can't be completed through the web UI (e.g., exercises 7b and 7c)
+   - This exercise can actually be completed entirely via the GitHub.com web interface (UI), but we recommend using a command-line `git` client if you're interested in doing later exercises that can't be completed through the web UI (e.g., exercises 7b and 7c)
 
 ## Instructions 
-**Note: Screen shots show forking hello-numerical-world; for this tutorial fork hello-numerical-world-sc20**  
-1. Fork repository hello-numerical-world-sc20: [(fork example)](images/03-git-fork.png)  
+*Note: The screen shots linked below show forking hello-numerical-world; for this tutorial fork hello-numerical-world-sc20 instead.*
+
+**Step 1.** Fork repository hello-numerical-world-sc20: [(fork example)](images/03-git-fork.png)  
   - Click on the following link bellow and hit the fork button in the upper right corner:  
 [hello-numerical-world-sc20](https://github.com/betterscientificsoftware/hello-numerical-world-sc20)
   - Choose your personal repo to fork into.  
   - Click on arrow next to code for path to clone. see [(find path to clone example)](images/03-git-path-to-clone.png)  
   - Click on ssh.  
   - Copy path to clipboard (use path in command below).  
-2. Clone the fork (on command line)  
+
+**Step 2.** Clone the fork (on command line)  
+
 ```
    $git clone git@github.com:<your repo name>/hello-numerical-world-sc20.git 
 Cloning into 'hello-numerical-work-sc20' ...
 .
 .
 ```
-3. Create branch  
+
+**Step 3.** Create branch  
+
 ```
    $cd hello-numerical-world-sc20
    $git checkout -b issue-1000
    Switched to a new branch 'issue-1000'
 ```
-4. Make Modification (use your favorite editor)  
+
+**Step 4.** Make Modification (use your favorite editor)  
+
 ```
    $vi README.md
    $ git diff
@@ -50,13 +57,16 @@ Cloning into 'hello-numerical-work-sc20' ...
    -To make the problem tractable for this lesson, we make some simplifying assumptions...
    +To make the problem tractable for this lesson, we make some simplifying assumptions:
 ```
+
 ```
    $ git add README.md 
    $ git commit -m "Replace ... with :"
    [issue-1000 2271b74] Replace ... with :
     1 file changed, 1 insertion(+), 1 deletion(-)
 ```
-5. Useful git commands to check repo
+
+**Step 5.** Useful git commands to check repo
+
 ```
    $git remote -vv
    origin	git@github.com:<your repo name>/hello-numerical-world-sc20.git (fetch)
@@ -66,7 +76,9 @@ Cloning into 'hello-numerical-work-sc20' ...
    * issue-1000
      main
 ```
-6. Push change to fork
+
+**Step 6.** Push change to fork
+
 ```
    $ git push origin issue-1000
    Enumerating objects: 5, done.
@@ -83,8 +95,9 @@ Cloning into 'hello-numerical-work-sc20' ...
    To github.com:<your repo name>/hello-numerical-world-sc20.git
     * [new branch]      issue-1000 -> issue-1000
 ```
-7. Issue pull request to upstream repository 
+
+**Step 7.** Issue pull request to upstream repository 
    - Visit your repository on github  
-   [compare branches](images/03-git-br-compare.png)  
-   [pull request](images/03-git-pr.png)  
-   [for pull request reviewer](images/03-git-pr-review.png)  
+   - [compare branches](images/03-git-br-compare.png)  
+   - [pull request](images/03-git-pr.png)  
+   - [for pull request reviewer](images/03-git-pr-review.png)  
