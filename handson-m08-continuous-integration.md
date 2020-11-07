@@ -27,7 +27,7 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
 
 ## Instructions
 
-1. You'll need to add a configuration file to your repository to tell Travis CI what should be done when it is invoked.  The file must be named `.travis.yml`.  Note the leading `.`.  In unix-like operating systems, this is a hidden file, that won't be displayed in directory listings by default.  But on Windows and in the GitHub web interface, such files are displayed by default.
+**Step 1.** You'll need to add a configuration file to your repository to tell Travis CI what should be done when it is invoked.  The file must be named `.travis.yml`.  Note the leading `.`.  In unix-like operating systems, this is a hidden file, that won't be displayed in directory listings by default.  But on Windows and in the GitHub web interface, such files are displayed by default.
 
     ```
     language: c++
@@ -41,7 +41,7 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
 
     The configuration file is written in the YAML markup language, which is pretty simple, but can be finicky with respect to indentation.  L1 and L3 of the file specify the environment that Travis CI needs to provide.  L6-L7 specify the command to execute when Travis is triggered.  Travis provides a rich set of capabilities.  You should peruse their documentation to learn more about them.
 
-2. Next you need to create a pull request to add this change to the upstream repository.  Travis is triggered by pull requests (among other things)
+**Step 2.** Next you need to create a pull request to add this change to the upstream repository.  Travis is triggered by pull requests (among other things)
 
     Once you create the pull request, you'll see GitHub performing a couple of checks.  One it always does is to look for conflicts between your PR and the base branch from which it was forked in the upstream repository (in case there were changes upstream that you haven't pulled into your fork yet).  And with the addition of the configuration file, the `make check` test is performed using the Travis CI service.  You'll often notice a short lag from the moment you click "Create pull request" to the moment the that checks start running.  But if it hasn't started running within about a minute, there's a good chance that there's a problem with your configuration file.
 
@@ -49,19 +49,19 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
 
     If the check fails, the pull request page will show that, and the "Details" link will continue to be available to help you debug the problem.  You can see this situation for yourself by modifying something in the repository to intentionally introduce an error.  For example, you could change the `script` in the `.travis.yml` file to something nonexistent (Travis is otherwise pretty resilient to errors in configuration files, at least simple ones).  Or you could introduce a syntax error into one of the code files so that the compilation fails.  Or you could change the math in the code or the parameters in the `check` target of the `makefile` so that the results don't match the golden results.
 
-    ### A Couple of Notes about GitHub
+### A Couple of Notes about GitHub
 
-    First, if you note carefully, the pull request that you create is not in your fork, but is in the upstream repository.  If you pay careful attention to the repository information at the top of the GitHub web interface, you will see that it differentiates between the upstream repository "betterscientificsoftware/hello-numerical-world-sc20" and your fork, which will have your username in place of "betterscientificsoftware" and beneath the repository name, it will have an annotation that it was forked from "betterscientificsoftware/hello-numerical-world-sc20".  You can navigate quickly back and forth between the upstream repository and your fork using that annotation (which will take from from your fork to the upstream repository) and the "Fork" button on the top right of the GitHub web interface.  If you're looking at the upstream version of a repository you've already forked, clicking the Fork button will take you straight to your fork.  If you're looking at your fork, clicking the annotation under the repository name will take you straight to the upstream repository.  **Things can be confusing if you're not in the repository you think you are.  Check often when you're working with pull requests.**
+First, if you note carefully, the pull request that you create is not in your fork, but is in the upstream repository.  If you pay careful attention to the repository information at the top of the GitHub web interface, you will see that it differentiates between the upstream repository "betterscientificsoftware/hello-numerical-world-sc20" and your fork, which will have your username in place of "betterscientificsoftware" and beneath the repository name, it will have an annotation that it was forked from "betterscientificsoftware/hello-numerical-world-sc20".  You can navigate quickly back and forth between the upstream repository and your fork using that annotation (which will take from from your fork to the upstream repository) and the "Fork" button on the top right of the GitHub web interface.  If you're looking at the upstream version of a repository you've already forked, clicking the Fork button will take you straight to your fork.  If you're looking at your fork, clicking the annotation under the repository name will take you straight to the upstream repository.  **Things can be confusing if you're not in the repository you think you are.  Check often when you're working with pull requests.**
 
-    Second, until the pull request is merged upstream (or closed), further commits in your fork will be added to the existing pull request.  (If you think you might need to have multiple pull requests active at the same time from your fork, you should create each of them on a separate branch within your fork.)
+Second, until the pull request is merged upstream (or closed), further commits in your fork will be added to the existing pull request.  (If you think you might need to have multiple pull requests active at the same time from your fork, you should create each of them on a separate branch within your fork.)
 
-    ### Adding Code Coverage Tracking
+### Adding Code Coverage Tracking
 
-    As mentioned, understanding how much of the code you're working with is covered by your testing is important for effective CI testing (really for *any* testing).  We're going to add coverage analysis to the build process and send the results to the Codecov.io service, which will track them for us.
+As mentioned, understanding how much of the code you're working with is covered by your testing is important for effective CI testing (really for *any* testing).  We're going to add coverage analysis to the build process and send the results to the Codecov.io service, which will track them for us.
 
-3. Login into your <https://codecov.io> account and add your "hello-numerical-world-sc20" repository to your account.
+**Step 3.** Login into your <https://codecov.io> account and add your "hello-numerical-world-sc20" repository to your account.
 
-4. Edit `.travis.yml` to add code coverage to the build, and reporting the results to Codecov.io:
+**Step 4.** Edit `.travis.yml` to add code coverage to the build, and reporting the results to Codecov.io:
 
     ```
     language: c++
@@ -80,6 +80,6 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
 
     Once you commit this change, it is added to your outstanding pull request.  If you switch to the upstream repository and go to your pull request, you'll see the results should now include code coverage information.  Note that the first time you upload to Codecov.io, it has no prior coverage information so it can't provide information about the *change* in coverage represented by the update to the pull request.
 
-5. Increase the code coverage by replacing `check` with `check_all` in the `.travis.yml` file.  Observe the changes via the Codecov.io report.  You can also examine the Travis CI logs to see the change in the execution time for the `check` and `check_all` test suites.
+**Step 5.** Increase the code coverage by replacing `check` with `check_all` in the `.travis.yml` file.  Observe the changes via the Codecov.io report.  You can also examine the Travis CI logs to see the change in the execution time for the `check` and `check_all` test suites.
 
-6. *Extra credit*: Make the CI test file if code coverage drops from the previous version. (Hint: read the [codeco.io documentation](https://docs.codecov.io/docs).)
+** Step 6.** *Extra credit*: Make the CI test file if code coverage drops from the previous version. (Hint: read the [codeco.io documentation](https://docs.codecov.io/docs).)
