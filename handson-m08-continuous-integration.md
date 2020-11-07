@@ -29,25 +29,25 @@ A video walk-through of (most of) this exercise is available at: <https://youtu.
 
 **Step 1.** You'll need to add a configuration file to your repository to tell Travis CI what should be done when it is invoked.  The file must be named `.travis.yml`.  Note the leading `.`.  In unix-like operating systems, this is a hidden file, that won't be displayed in directory listings by default.  But on Windows and in the GitHub web interface, such files are displayed by default.
 
-    ```
-    language: c++
-    
-    compiler:
-      - gcc
-    
-    script:
-      - make check
-    ```
+```
+language: c++
 
-    The configuration file is written in the YAML markup language, which is pretty simple, but can be finicky with respect to indentation.  L1 and L3 of the file specify the environment that Travis CI needs to provide.  L6-L7 specify the command to execute when Travis is triggered.  Travis provides a rich set of capabilities.  You should peruse their documentation to learn more about them.
+compiler:
+  - gcc
+
+script:
+  - make check
+```
+
+The configuration file is written in the YAML markup language, which is pretty simple, but can be finicky with respect to indentation.  L1 and L3 of the file specify the environment that Travis CI needs to provide.  L6-L7 specify the command to execute when Travis is triggered.  Travis provides a rich set of capabilities.  You should peruse their documentation to learn more about them.
 
 **Step 2.** Next you need to create a pull request to add this change to the upstream repository.  Travis is triggered by pull requests (among other things)
 
-    Once you create the pull request, you'll see GitHub performing a couple of checks.  One it always does is to look for conflicts between your PR and the base branch from which it was forked in the upstream repository (in case there were changes upstream that you haven't pulled into your fork yet).  And with the addition of the configuration file, the `make check` test is performed using the Travis CI service.  You'll often notice a short lag from the moment you click "Create pull request" to the moment the that checks start running.  But if it hasn't started running within about a minute, there's a good chance that there's a problem with your configuration file.
+Once you create the pull request, you'll see GitHub performing a couple of checks.  One it always does is to look for conflicts between your PR and the base branch from which it was forked in the upstream repository (in case there were changes upstream that you haven't pulled into your fork yet).  And with the addition of the configuration file, the `make check` test is performed using the Travis CI service.  You'll often notice a short lag from the moment you click "Create pull request" to the moment the that checks start running.  But if it hasn't started running within about a minute, there's a good chance that there's a problem with your configuration file.
 
-    While the check is running, you will see a "Details" link that you can follow to drill into what's happening.  The immediate result of clicking on that link is a screen from GitHub summarizing what's happening.  At the bottom of the screen is a link "View more details on Travis CI".  If you follow that link, you should see the output of the `make check` execution, which includes building the heat equation code, running it with a specific set of inputs, and comparing the results with a "golden" set of results that's been deemed correct. If the check completes correctly on Travis (signaled by whatever script exiting with an exit code of 0), the pull request page will show that all checks passed, but will still provide a link to allow you to drill into the details.  Both GitHub and Travis keep logs from all these actions for some time.
+While the check is running, you will see a "Details" link that you can follow to drill into what's happening.  The immediate result of clicking on that link is a screen from GitHub summarizing what's happening.  At the bottom of the screen is a link "View more details on Travis CI".  If you follow that link, you should see the output of the `make check` execution, which includes building the heat equation code, running it with a specific set of inputs, and comparing the results with a "golden" set of results that's been deemed correct. If the check completes correctly on Travis (signaled by whatever script exiting with an exit code of 0), the pull request page will show that all checks passed, but will still provide a link to allow you to drill into the details.  Both GitHub and Travis keep logs from all these actions for some time.
 
-    If the check fails, the pull request page will show that, and the "Details" link will continue to be available to help you debug the problem.  You can see this situation for yourself by modifying something in the repository to intentionally introduce an error.  For example, you could change the `script` in the `.travis.yml` file to something nonexistent (Travis is otherwise pretty resilient to errors in configuration files, at least simple ones).  Or you could introduce a syntax error into one of the code files so that the compilation fails.  Or you could change the math in the code or the parameters in the `check` target of the `makefile` so that the results don't match the golden results.
+If the check fails, the pull request page will show that, and the "Details" link will continue to be available to help you debug the problem.  You can see this situation for yourself by modifying something in the repository to intentionally introduce an error.  For example, you could change the `script` in the `.travis.yml` file to something nonexistent (Travis is otherwise pretty resilient to errors in configuration files, at least simple ones).  Or you could introduce a syntax error into one of the code files so that the compilation fails.  Or you could change the math in the code or the parameters in the `check` target of the `makefile` so that the results don't match the golden results.
 
 ### A Couple of Notes about GitHub
 
@@ -63,22 +63,22 @@ As mentioned, understanding how much of the code you're working with is covered 
 
 **Step 4.** Edit `.travis.yml` to add code coverage to the build, and reporting the results to Codecov.io:
 
-    ```
-    language: c++
-    
-    compiler:
-      - gcc
-    
-    script:
-      - make CXXFLAGS=--coverage LDFLAGS="--coverage -lm" check
-    
-    after_success:
-      - bash <(curl -s https://codecov.io/bash)
-     ```
+```
+language: c++
 
-    The `after_success` block will update the CodeCov.io site with the coverage information from the check that just completed.  This bit of magic is documented in the [Quick Start](https://docs.codecov.io/docs) documentation on Codecov.io.  It is referred to as the "Codecov bash uploader".
+compiler:
+  - gcc
 
-    Once you commit this change, it is added to your outstanding pull request.  If you switch to the upstream repository and go to your pull request, you'll see the results should now include code coverage information.  Note that the first time you upload to Codecov.io, it has no prior coverage information so it can't provide information about the *change* in coverage represented by the update to the pull request.
+script:
+  - make CXXFLAGS=--coverage LDFLAGS="--coverage -lm" check
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
+```
+
+The `after_success` block will update the CodeCov.io site with the coverage information from the check that just completed.  This bit of magic is documented in the [Quick Start](https://docs.codecov.io/docs) documentation on Codecov.io.  It is referred to as the "Codecov bash uploader".
+
+Once you commit this change, it is added to your outstanding pull request.  If you switch to the upstream repository and go to your pull request, you'll see the results should now include code coverage information.  Note that the first time you upload to Codecov.io, it has no prior coverage information so it can't provide information about the *change* in coverage represented by the update to the pull request.
 
 **Step 5.** Increase the code coverage by replacing `check` with `check_all` in the `.travis.yml` file.  Observe the changes via the Codecov.io report.  You can also examine the Travis CI logs to see the change in the execution time for the `check` and `check_all` test suites.
 
