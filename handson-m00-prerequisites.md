@@ -20,7 +20,9 @@ layout: home
    - Click the "Sign Up" button
    - Choose "Sign up with GitHub"
    - On the  "Authorize Travis CI" page, click to "Authorize travis-pro"
-   - Dismiss the popup that welcomes you to Travis CI
+   - On the "First time here?" page, click the "Activate all repositories using GitHub Apps" button
+   - Select "All Repositories" (in general, you might want to be more selective in giving Travis-CI access to your repositories, but for now this is expedient).  Click "Approve & install"
+   - On the Travis-CI page for your account, click "Activate" to activate the GitHub integration.
 
 3. If you don't have a **Codecov.io** account already, please set one up (used in **exercise 8**)
    - Go to <https://codecov.io/>
