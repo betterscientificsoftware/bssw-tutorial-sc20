@@ -28,7 +28,7 @@ This site will provide late-breaking updates and additional information and reso
 
 ## How to Participate
 
-* [Registration](https://sc20.supercomputing.org/attend/register/) for the tutorial program ("TUT") is required.  You can register at any time up to 7 December 2020 to get access to the recorded version of the tutorial for up to 6 months.
+* [Registration](https://sc20.supercomputing.org/attend/register/) for the tutorial program ("TUT") is required.  You can register at any time up to 16 December 2020 to get access to the recorded version of the tutorial for up to 6 months.
 
 * Most presentations have been pre-recorded, though there are several live sessions interspersed.
 
@@ -38,7 +38,7 @@ This site will provide late-breaking updates and additional information and reso
 
 * Participation in the Q&A and demonstrations is optional – we know you need breaks too.
 
-* **Your feedback is important both to us and to the SC20 organizers.  Please remember to [evaluate us](https://submissions.supercomputing.org/?page=Submit&id=TutorialEvaluation&site=sc20)!** of follow the Evaluation link in the tutorial's page on the EventScribe site.
+* **Your feedback is important both to us and to the SC20 organizers.  Please remember to [evaluate us](https://submissions.supercomputing.org/?page=Submit&id=TutorialEvaluation&site=sc20)!** of follow the Evaluation link in the tutorial's page on the EventScribe site.  Evaluations can be submitted through 20 December 2020.
 
 * **You might also be interested in attending these other ["software-related" events at SC20](https://bssw.io/events/sc20-software-related-events).**
 
