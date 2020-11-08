@@ -79,7 +79,7 @@ Unfortunately, GitHub issues don't support hierarchies of issues, such as epic-s
 
 **Step 4.** Use cross-references, labels, and checklists to make the issues you created above better interlinked and easier to manage.  For things like this, we recommend editing the body of the issues rather than adding comments to the issues.
 
-### Working GitHub Project (Kanban) Boards
+### Working with GitHub Project (Kanban) Boards
 
 Next, we're going to setup a simple kanban board that you can use to track the progress of your refactoring work in exercise 7b.
 
