@@ -44,7 +44,7 @@ You may want to explore codes of conduct used by other teams similar to yours.  
 We'll use GitHub's web interface to capture the policy.  But remember that such policies should be living documents -- be ready to revisit and update them to try to address negative situations that might not have been adequately dealt with, or to capture positive practices.
 
 **Step 2.** In your repository, go to the "Code" tab.
-- Click the "Add file" button (or "creating a new file" link) to create a new file for the policy.
+- Click the "Add file" button to create a new file for the policy.
 - Give the file an appropriate name, such as `CODE-OF-CONDUCT` or `TeamPolicy` (to use Markdown rather than plain text, add a `.md` suffix to the filenname).
 - In the text area, enter the text of your policy
 - The fields beneath the "Commit new file" heading will comprise the commit message for your new file.  It is a good practice to provide informative commit messages for all commits, but it is not required.
